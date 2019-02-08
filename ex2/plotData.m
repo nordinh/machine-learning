@@ -11,7 +11,11 @@ figure; hold on;
 %               2D plot, using the option 'k+' for the positive
 %               examples and 'ko' for the negative examples.
 %
+positiveResults = find(y==1);
+negativeResults = find(y==0);
 
+plot(X(positiveResults,1), X(positiveResults,2), 'k+', 'linewidth', 2);
+plot(X(negativeResults,1), X(negativeResults,2), 'ko', 'markerfacecolor', 'y');
 
 
 
